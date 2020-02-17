@@ -1,0 +1,12 @@
+$(`.gallery-item`).hide();
+$(`.gallery-item.active`).show();
+
+setInterval(() => {
+  let current = $(`.gallery-item.active`);
+  let nextImg = current.next();
+  if (nextImg.length === 0) {
+    nextImg = $(`.gallery-item:first-child`);
+  }
+  current.removeClass(`active`).fadeOut(1000);
+  nextImg.addClass(`active`).fadeIn(1000);
+}, 2000);
