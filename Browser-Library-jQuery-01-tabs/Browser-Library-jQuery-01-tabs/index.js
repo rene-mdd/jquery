@@ -1,9 +1,11 @@
 $("button").click(function() {
   let id = $(this).data("place");
-  $(`#${id}`).css("display", "block");
+  var curr = $(`#${id}`).css("display", "block");
+  console.log(curr.siblings()[0])
+  
 
   
-  console.log(id);
+ 
 
 });
 // $("button").click(function() {
